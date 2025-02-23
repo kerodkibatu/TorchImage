@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TorchImage.Test": {
+      "commandName": "Project",
+      "workingDirectory": "./"
+    }
+  }
+}
