@@ -2,13 +2,13 @@
 
 using System.Diagnostics;
 using TorchImage;
-using TorchImage.ImageViewer.WinForms;
 using TorchSharp;
 using TorchSharp.Modules;
 using static TorchSharp.torch;
 using static TorchSharp.torch.nn;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
+using TorchImage.WinForms;
 
 class AutoEncoder : nn.Module<Tensor, Tensor>
 {

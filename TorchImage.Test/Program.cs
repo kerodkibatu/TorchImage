@@ -19,11 +19,11 @@ var device = torch.cuda.is_available() ? torch.CUDA : torch.CPU;
 var transform = transforms.Compose(
     transforms.Resize(70),
     transforms.CenterCrop(64)
-// Combine 3 channels into 1 channel
-// transforms.Lambda(img => img.mean([0]).unsqueeze(0))
+    // Combine 3 channels into 1 channel
+    // transforms.Lambda(img => img.mean([0]).unsqueeze(0))
 );
 
-var brainTumorDataset = new SimpleImageDataset("C:\\Users\\Kerod\\Desktop\\TestFolder\\20250216_131429[1]", transform: transform);
+var brainTumorDataset = new SimpleImageDataset("./brain-tumor", transform: transform);
 
 var dataLoader = new DataLoader(brainTumorDataset, batchSize: 4, shuffle: true, device: device);
 
