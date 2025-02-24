@@ -4,7 +4,29 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>TorchImage</Title>
+    <PackageProjectUrl>https://github.com/kerodkibatu/TorchImage</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/kerodkibatu/TorchImage</RepositoryUrl>
+    <PackageTags>torchsharp;image processing;ML;AI;CV;Computer Vision</PackageTags>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Authors>KerVerse</Authors>
+    <Version>0.0.1</Version>
+    <Description>TorchImage seamlessly integrates powerful image processing capabilities into TorchSharp using SixLabors.ImageSharp</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SixLabors.ImageSharp" Version="3.1.6" />
