@@ -1,8 +1,11 @@
 ﻿using SixLabors.ImageSharp;
 
-namespace TorchImage.ImageViewer;
+namespace TorchImage;
 
-// Interface for a Preview Surface that can display an image
+/// <summary>
+/// Interface for displaying images.
+/// Install the TorchImage.WinForms package to use the default windows implementation.
+/// </summary>
 public interface IImageViewer
 {
     void Show(Image image);

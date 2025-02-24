@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TorchImage.ImageViewer.WinForms\TorchImage.ImageViewer.WinForms.csproj" />
+    <ProjectReference Include="..\TorchImage.ImageViewer.WinForms\TorchImage.WinForms.csproj" />
     <ProjectReference Include="..\TorchImage\TorchImage.csproj" />
   </ItemGroup>
 

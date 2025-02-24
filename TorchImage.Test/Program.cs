@@ -1,5 +1,4 @@
 ﻿using TorchImage;
-using TorchImage.ImageViewer.WinForms;
 using TorchSharp;
 using TorchSharp.Modules;
 using static TorchSharp.torch;
@@ -7,6 +6,7 @@ using static TorchSharp.torch.nn;
 using static TorchSharp.torchvision;
 using System.Runtime.InteropServices;
 using SixLabors.ImageSharp;
+using TorchImage.WinForms;
 [DllImport("kernel32.dll")]
 static extern bool AllocConsole();
 

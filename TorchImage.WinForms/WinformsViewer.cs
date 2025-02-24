@@ -1,9 +1,23 @@
 ﻿using SixLabors.ImageSharp;
 using System.Drawing.Drawing2D;
-namespace TorchImage.ImageViewer.WinForms;
+using TorchImage;
+
+namespace TorchImage.WinForms;
+/// <summary>
+/// Default image viewer using Windows Forms.
+/// </summary>
 public class WinFormsViewer : IImageViewer
 {
+    /// <summary>
+    /// Default instance of the WinFormsViewer.
+    /// </summary>
     public static WinFormsViewer Default { get; } = new WinFormsViewer();
+    /// <summary>
+    /// Create a new instance of the WinFormsViewer.
+    /// 
+    /// Can specify the minimum size of the window.
+    /// </summary>
+    /// <param name="minSize"></param>
     public WinFormsViewer((int width, int height)? minSize = null)
     {
         MinimumSize = minSize.HasValue ? new System.Drawing.Size(minSize.Value.width, minSize.Value.height) : new System.Drawing.Size(512, 512);
@@ -11,6 +25,10 @@ public class WinFormsViewer : IImageViewer
 
     System.Drawing.Size MinimumSize { get; }
 
+    /// <summary>
+    /// Show an image.
+    /// </summary>
+    /// <param name="image"></param>
     public void Show(SixLabors.ImageSharp.Image image)
     {
         var form = new ImageForm(image)
@@ -19,6 +37,10 @@ public class WinFormsViewer : IImageViewer
         };
         form.ShowDialog();
     }
+    /// <summary>
+    /// Show a collection of images as a slide show.
+    /// </summary>
+    /// <param name="images"></param>
     public void Show(IEnumerable<SixLabors.ImageSharp.Image> images)
     {
         var form = new ImageSlideForm(images)
@@ -28,7 +50,7 @@ public class WinFormsViewer : IImageViewer
         form.ShowDialog();
     }
 }
-class ImageSlideForm : Form
+internal class ImageSlideForm : Form
 {
     private PictureBox pictureBox;
     private Button nextButton;
@@ -119,7 +141,7 @@ class ImageSlideForm : Form
         pictureBox.Image = _images.Skip(index).First();
     }
 }
-class ImageForm : Form
+internal class ImageForm : Form
 {
     private PictureBox pictureBox;
     public ImageForm(SixLabors.ImageSharp.Image image)

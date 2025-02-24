@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputType>Library</OutputType>
+		<UseWindowsForms>True</UseWindowsForms>
+		
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>TorchImage.WinForms</Title>
+		<PackageProjectUrl>https://github.com/kerodkibatu/TorchImage</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/kerodkibatu/TorchImage</RepositoryUrl>
+		<PackageTags>torchsharp;image processing;ML;AI;CV;Computer Vision</PackageTags>
+		<Authors>KerVerse</Authors>
+		<Version>0.0.1</Version>
+		<Description>TorchImage.WinForms provides a default WinForms ImageViewer for TorchSharp with TorchImage</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="TorchImage" Version="0.0.1" />
+	</ItemGroup>
+
+</Project>
